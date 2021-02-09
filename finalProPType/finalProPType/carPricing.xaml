@@ -23,7 +23,7 @@
             <Label x:Name="dailylbl"   FontSize="Large"  TextColor="DodgerBlue" HorizontalOptions="Center"  />
             <Label x:Name="weeklylbl"  FontSize="Large"  TextColor="DodgerBlue"  HorizontalOptions="Center" />
             <Label x:Name="monthlylbl" FontSize="Large"  TextColor="DodgerBlue" HorizontalOptions="Center"/>
-            <Label x:Name="nilbl"      FontSize="Large"       TextColor="DarkRed" HorizontalOptions="Center"/>
+            <Label x:Name="nilbl"      FontSize="Large"  TextColor="DarkRed" HorizontalOptions="Center"/>
 
         </StackLayout>
     </ContentPage.Content>
