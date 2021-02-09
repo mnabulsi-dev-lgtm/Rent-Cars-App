@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="finalProPType.DeleteCar">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Delete" FontSize="Large" TextColor="DodgerBlue"
+                HorizontalOptions="CenterAndExpand" />
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Car ID" FontSize="Medium" FontAttributes="Bold" TextColor="DodgerBlue" VerticalOptions="Center"
+                       Margin="0,20,0,0"/>
+                <Entry x:Name="id" TextColor="DodgerBlue" HorizontalOptions="FillAndExpand" />
+            </StackLayout>
+            <Button x:Name="dBtn" Text="Delete" HorizontalOptions="FillAndExpand" BackgroundColor="DodgerBlue" 
+                    TextColor="White" Clicked="dBtn_Clicked" Margin="0,10,0,10"/>
+            <Button x:Name="showBtn" Text="Show All IDs" HorizontalOptions="FillAndExpand" BackgroundColor="DodgerBlue" 
+                    TextColor="White" Clicked="showBtn_Clicked" />
+            <Frame Padding="0" >
+                <Editor x:Name="allIDS" IsEnabled="False" />
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

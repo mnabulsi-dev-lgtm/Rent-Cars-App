@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="finalProPType.Views.Login">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <LayoutOptions x:Key="fandex">FillAndExpand</LayoutOptions>
+            <LayoutOptions x:Key="c">Center</LayoutOptions>
+            <Style x:Key="lbls" TargetType="Label">
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="TextColor" Value="DodgerBlue"/>
+                <Setter Property="VerticalOptions" Value="{StaticResource c}"/>
+            </Style>
+            <Style x:Key="ents" TargetType="Entry">
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="PlaceholderColor" Value="DodgerBlue"/>
+                <Setter Property="HorizontalOptions" Value="{StaticResource fandex}"/>
+            </Style>
+            <Style x:Key="btns" TargetType="Button">
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="BackgroundColor" Value="DodgerBlue"/>
+                <Setter Property="HorizontalOptions" Value="{StaticResource fandex}"/>
+                <Setter Property="CornerRadius" Value="25"/>
+                
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <StackLayout Spacing="5" Margin="10">
+        <Image Source="logo.jpg"/>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Username" Style="{StaticResource lbls}" Margin="0,20,0,0"/>
+            <Entry x:Name="unEntry" Style="{StaticResource Key=ents}"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Password" Style="{StaticResource lbls}"  Margin="0,20,0,0"/>
+            <Entry x:Name="pwEntry" Style="{StaticResource Key=ents}" IsPassword="True"/>
+        </StackLayout>
+        <Button x:Name="loginBtn" Text="Login" Style="{StaticResource btns}"
+                Clicked="loginBtn_Clicked" Margin="0,25,0,0"/>
+        <Button x:Name="RegBtn" Text="Registration" Style="{StaticResource btns}"
+                Clicked="RegBtn_Clicked" />
+    </StackLayout>
+
+</ContentPage>

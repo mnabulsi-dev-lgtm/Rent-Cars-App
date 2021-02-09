@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="finalProPType.AvailableCars">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <LayoutOptions x:Key="c" >Center</LayoutOptions>
+            <Style x:Key="lbl" TargetType="Label">
+                <Setter Property="TextColor" Value="DodgerBlue"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="VerticalOptions" Value="{StaticResource Key=c}"/>
+                <Setter Property="FontSize" Value="Medium"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout >
+            <StackLayout Orientation="Horizontal" Spacing="10">
+            <Label Text="AVAILABLE CARS" TextColor="DodgerBlue" FontSize="Large" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
+            <Image Source="ac"/>
+            </StackLayout>
+            <!--<Entry x:Name="hynd" Placeholder="enter car maker" HorizontalOptions="Center"/>-->
+
+            <Button x:Name="show" HorizontalOptions="FillAndExpand" BackgroundColor="DodgerBlue" Text="Show All Available Cars" TextColor="White"
+                    Clicked="show_Clicked"/>
+            <ListView ItemsSource="{Binding carMake}" x:Name="contentView" HasUnevenRows="True" Margin="0,20,0,0" 
+                      ItemSelected="contentView_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout x:Name="Mystack">
+                                <StackLayout Orientation="Horizontal">
+                                    <Image x:Name="im" Source="logo.jpg" HeightRequest="100" WidthRequest="200"/>
+                                    <StackLayout>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label x:Name="makelbl" Text="{Binding carMake }" Style="{StaticResource lbl}" 
+                                               Margin="10,20,0,10" />
+                                       <Label x:Name="modellbl" Text="{Binding carModel }" Style="{StaticResource lbl}"
+                                               Margin="10,20,0,10"/>
+                                    </StackLayout>
+                               
+                                <StackLayout Orientation="Horizontal" Spacing="15">
+                                <Label x:Name="plbl" Text="{Binding price}" Style="{StaticResource lbl}"
+                                       Margin="10,0,0,10"/>
+                               <Label x:Name="elbl" Text="{Binding expDate}" Style="{StaticResource lbl}"
+                                       Margin="10,0,0,10"/>
+                                </StackLayout>
+                                    </StackLayout>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

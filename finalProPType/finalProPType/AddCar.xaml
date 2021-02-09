@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="finalProPType.AddCar">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="ADMIN (Add Car)" FontSize="Large" TextColor="DodgerBlue" HorizontalOptions="CenterAndExpand"/>
+            <Picker x:Name="makePicker" Title="Choose Car maker" HorizontalOptions="FillAndExpand"/>
+            <Picker x:Name="modelPicker" Title="Choose Car Model" HorizontalOptions="FillAndExpand"/>
+            <Entry x:Name="dofrent" Placeholder="Manufacturing year" HorizontalOptions="FillAndExpand"/>
+            <Entry x:Name="carPrice" Placeholder="Car Price" HorizontalOptions="FillAndExpand"/>
+            <Button x:Name="SubmitBttn" Text="Save Info" BackgroundColor="DodgerBlue" 
+                    TextColor="White" HorizontalOptions="FillAndExpand" Clicked="SubmitBttn_Clicked"/>
+            <!--<ListView x:Name="info"/>-->
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

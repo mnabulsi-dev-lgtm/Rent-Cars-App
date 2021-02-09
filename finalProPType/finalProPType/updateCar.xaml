@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="finalProPType.updateCar">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout>
+                <Label Text="ADMIN (Update Car)" FontSize="Large" TextColor="DodgerBlue" HorizontalOptions="CenterAndExpand"/>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Car ID" FontSize="Medium" TextColor="DodgerBlue" VerticalOptions="Center" Margin="0,20,0,0"/>
+                    <Entry x:Name="deletedId" HorizontalOptions="FillAndExpand" TextColor="DodgerBlue" />
+                </StackLayout>
+                <Picker x:Name="makePicker" Title="Choose Car maker" HorizontalOptions="FillAndExpand"/>
+                <Picker x:Name="modelPicker" Title="Choose Car Model" HorizontalOptions="FillAndExpand"/>
+                <Entry x:Name="dofrent" Placeholder="Manufacturing year" HorizontalOptions="FillAndExpand"/>
+                <Entry x:Name="carPrice" Placeholder="Car Price" HorizontalOptions="FillAndExpand"/>
+                <Button x:Name="upBttn" Text="Update Info" BackgroundColor="DodgerBlue" 
+                    TextColor="White" HorizontalOptions="FillAndExpand" Clicked="upBttn_Clicked" />
+               
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

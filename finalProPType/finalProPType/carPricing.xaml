@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="finalProPType.carPricing">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Clear" IconImageSource="r.jpg" Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" Spacing="10">
+                <Label Text="Car Pricing" TextColor="DodgerBlue" FontSize="Large" Margin="10"
+                       FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
+                <Image Source="p.png"/>
+            </StackLayout>
+            <Picker x:Name="makePicker"     Title="Choose Car maker"    TextColor="DodgerBlue"   HorizontalOptions="FillAndExpand"/>
+            <Picker x:Name="modelPicker"    Title="Choose Car Model"    TextColor="DodgerBlue"  HorizontalOptions="FillAndExpand"/>
+            <Picker x:Name="durationPicker" Title="Choose the duration" TextColor="DodgerBlue" HorizontalOptions="FillAndExpand" Margin="0,0,0,25"/>
+            <Button x:Name="showRes" HorizontalOptions="FillAndExpand" Text="Show Result" BackgroundColor="DodgerBlue" TextColor="White"
+                    Clicked="showRes_Clicked"/>
+            <Label x:Name="dailylbl"   FontSize="Large"  TextColor="DodgerBlue" HorizontalOptions="Center"  />
+            <Label x:Name="weeklylbl"  FontSize="Large"  TextColor="DodgerBlue"  HorizontalOptions="Center" />
+            <Label x:Name="monthlylbl" FontSize="Large"  TextColor="DodgerBlue" HorizontalOptions="Center"/>
+            <Label x:Name="nilbl"      FontSize="Large"       TextColor="DarkRed" HorizontalOptions="Center"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
